@@ -51,9 +51,7 @@ jobs:
 
       # Start Fortify on Demand SAST scan and wait until results complete.
       - name: Run FoD SAST Scan
-        uses: fortify/github-action/fod-sast-scan@v1
-        with:
-          sast-scan: true
+        uses: fortify/github-action/fod-sast-scan@main
         env:
           FOD_URL: https://ams.fortify.com
           FOD_CLIENT_ID: ${{secrets.FOD_API_KEY}}
